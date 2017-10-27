@@ -1,0 +1,20 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "tagItem": "汉族"},
+        {"id": 2, "tagItem": "蒙古族"},
+        {"id": 3, "tagItem": "妖族"},
+        {"id": 4, "tagItem": "神族"},
+        {"id": 5, "tagItem": "精灵族"},
+        {"id": 6, "tagItem": "傣族"},
+        {"id": 7, "tagItem": "土家族"}
+    ],
+    "selectList": [
+        {"id": 1, "tagItemText": "汉族1"},
+        {"id": 2, "tagItemText": "汉族2"},
+        {"id": 3, "tagItemText": "汉族3"},
+        {"id": 4, "tagItemText": "汉族4"},
+        {"id": 5, "tagItemText": "汉族5"}
+   ],
+    "errMsg": "操作失败！"
+}

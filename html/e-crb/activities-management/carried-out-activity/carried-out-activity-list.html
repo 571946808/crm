@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>待开展活动</title>
+    <!--#include file="/html/common/head.html"-->
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+       <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            </li>
+                            <li>
+                                <a href="#">活动管理</a>
+                            </li>
+                            <li class="active">待开展活动</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息!</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <form class="form-horizontal J_searchForm">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>搜索</h4>
+                                </div>
+                                <div class="panel-body">        
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">活动名称</label>
+                                        <div class="col-sm-2">
+                                           <select name="name" id="editable-select3" class="form-control J_selectActivity new185"></select>
+                                        </div>
+                                        <label class="col-sm-1 control-label">活动类型</label>
+                                        <div class="col-sm-2">
+                                            <select id="activityType" class="form-control J_activityType w180" name="type">
+                                            <option value="-1">请选择</option>
+                                            <option value="0">会员关怀型</option>
+                                            <option value="1">营销型</option>
+                                           </select>
+                                        </div>
+                                        <label class="col-sm-1 control-label">活动状态</label>
+                                        <div class="col-sm-2">
+                                            <select id="activityState" class="form-control J_activityState w180" name="state">
+                                            <option value="-1">请选择</option>
+                                        	<option value="0">待审批</option>
+                                        	<option value="1">通过</option>
+                                        	<option value="2">驳回</option>
+                                        	</select>
+                                        </div>
+                                        <label class="col-sm-1 control-label">活动级别</label>
+                                        <div class="col-sm-2">
+                                            <select id="activityLevel" class="form-control J_activitylevel w180" name="level">
+                                            <option value="-1">请选择</option>
+                                            <option value="0">一级</option>
+                                            <option value="1">二级</option>
+                                            <option value="2">三级</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left">
+                                <button type="submit"  class="btn J_search btn-success"><i class="fa fa-search"></i>&nbsp;查询</button>
+                                <a href="#" class="btn btn-success" id="edit_model"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12">                  
+                        <div class="panel panel-info">
+                            <!-- <div class="panel-heading">
+                                <h4>权限列表</h4>
+                            </div> -->
+                            <div class="panel-body">
+                                <input type="hidden" name="userId" class="J_userId" value="111">
+                                <form action="" class="J_form">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>活动名称</th>
+                                                    <th>活动类型</th>
+                                                    <th>活动级别</th>
+                                                    <th>活动状态</th>
+                                                    <th>活动开始日期</th>
+                                                    <th>活动结束日期</th>
+                                                    <th>活动人员</th>
+                                                    <th>活动创建人</th>
+                                                    <th>活动创建时间</th>
+                                                    <th>操作</th>
+                                                </tr>               
+                                            </thead>
+                                            <tbody id="J_template">
+                                               <!--  <tr data-id="1">
+                                                    <td>1</td>
+                                                    <td>端午节活动</td>
+                                                    <td>会员关怀</td>
+                                                    <td>一级</td>
+                                                    <td>通过</td>
+                                                    <td>2017.7.24</td>
+                                                    <td>2017.12.25</td>
+                                                    <td>会员组A</td>
+                                                    <td>小白</td>
+                                                    <td>2017.7.21</td>
+                                                    <td>
+                                                        <a href="#" class="label-info J_see"><i class="fa fa-search"></i>&nbsp;查看</a>
+                                                         <a href="#" class="label-info J_cancle" data-toggle="modal" data-target="#cancleDialog"><i class="fa fa-exclamation"></i>&nbsp;注销</a>
+                                                        <a href="#" class="label-info J_revise"><i class="fa fa-pencil"></i>&nbsp;修改</a>
+                                                        <a href="#" class="label-info J_approve"><i class="fa fa-eyedropper"></i>&nbsp;审批</a>
+                                                    </td>
+
+                                                </tr> -->
+                                            </tbody>
+                                            <!-- <tbody>
+                                                <tr data-id="2">
+                                                    <td>2</td>
+                                                    <td>端午节活动</td>
+                                                    <td>会员关怀</td>
+                                                    <td>一级</td>
+                                                    <td>通过</td>
+                                                    <td>2017.7.24</td>
+                                                    <td>2017.12.25</td>
+                                                    <td>会员组A</td>
+                                                    <td>小白</td>
+                                                    <td>2017.7.21</td>
+                                                    <td>
+                                                        <a href="#" class="label-info J_see"><i class="fa fa-search"></i>&nbsp;查看</a>
+                                                        <a href="#" class="label-info J_cancle" data-toggle="modal" data-target="#cancleDialog"><i class="fa fa-exclamation"></i>&nbsp;注销</a>
+                                                        <a href="#" class="label-info J_revise"><i class="fa fa-pencil"></i>&nbsp;修改</a>
+                                                        <a href="#" class="label-info J_approve"><i class="fa fa-eyedropper"></i>&nbsp;审批</a>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr data-id="3">
+                                                    <td>3</td>
+                                                    <td>端午节活动</td>
+                                                    <td>会员关怀</td>
+                                                    <td>一级</td>
+                                                    <td>通过</td>
+                                                    <td>2017.7.24</td>
+                                                    <td>2017.12.25</td>
+                                                    <td>会员组A</td>
+                                                    <td>小白</td>
+                                                    <td>2017.7.21</td>
+                                                    <td>
+                                                        <a href="#" class="label-info J_see"><i class="fa fa-search"></i>&nbsp;查看</a>
+                                                        <a href="#" class="label-info J_cancle" data-toggle="modal" data-target="#cancleDialog"><i class="fa fa-exclamation"></i>&nbsp;注销</a>
+                                                        <a href="#" class="label-info J_revise"><i class="fa fa-pencil"></i>&nbsp;修改</a>
+                                                        <a href="#" class="label-info J_approve"><i class="fa fa-eyedropper"></i>&nbsp;审批</a>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody> -->
+                                        </table>
+                                    </div>
+                                        <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 注销对话框 -->
+    <input class="hidId" type="hidden"></input>
+    <div class="modal fade" id="cancleDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定要注销吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_cancleDlg" >确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 操作失败对话框 -->
+    <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>操作失败，请重新操作!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" >确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 审批对话框 -->
+    <div class="modal fade" id="approveDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal J_editForm">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">审批</label>
+                            <div class="col-sm-6">
+                               <select class="form-control w180  J_examineApprove" name ="examineApprove" value="1">
+                                        <option value="1">请选择</option>
+                                        <option value="2">通过</option>
+                                        <option value="3">驳回</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">备注</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control w180 J_remarks" name ="remaks" value="2">
+                                     
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_approveDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/html/common/footer.html"-->
+     <script src="/js/e-crb/activities-management/carried-out-activity/carried-out-activity-list.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>进行中活动列表</title>
+    <!--#include file="/html/common/head.html"-->
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            </li>
+                            <li>
+                                <a href="#">活动管理</a>
+                            </li>
+                            <li class="active">进行中活动管理</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息!</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <form action="" class="form-horizontal J_searchForm">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>搜索</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-1">姓名</label>
+                                        <div class="col-sm-2">
+                                            <select name="name" id="editable-select1" class="form-control J_selectName w180"></select>
+                                        </div>
+                                        <label class="col-sm-2 control-label">身份证号</label>
+                                        <div class="col-sm-2">
+                                            <select name="idcard" id="editable-select2" class="form-control J_selectId w180"></select>
+                                        </div>
+                                        <label class="col-sm-2 control-label">活动名称</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select3" class="form-control J_selectActivity w180" name="activity"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">  
+                                        <label class="col-sm-1 control-label">活动类型</label>
+                                        <div class="col-sm-2">
+                                            <select name="activityType" class="form-control w180">
+                                                <option value="-1">请选择</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>       
+                                        <label class="col-sm-2 control-label">活动级别</label>
+                                        <div class="col-sm-2">
+                                            <select class="form-control w180" name="activityLevel">
+                                                <option value="-1">请选择</option>
+                                                <option value="1">一级</option>
+                                                <option value="2">二级</option>
+                                                <option value="3">三级</option>
+                                            </select>
+                                        </div>     
+                                        <label class="col-sm-2 control-label">活动状态</label>
+                                        <div class="col-sm-2">           
+                                            <select class="form-control w180" name="activityStatus">
+                                                <option value="-1">请选择</option>
+                                                <option value="1">通知期</option>
+                                                <option value="2">执行期</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left">
+                                <button class="btn btn-success btn-radius-no J_search" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-info">
+                            <!-- <div class="panel-heading">
+                                <h4>活动列表</h4>
+                            </div> -->
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>活动名称</th>
+                                                <th>活动类型</th>
+                                                <th>姓名</th>
+                                                <th>身份证号</th>
+                                                <th>活动级别</th>
+                                                <th>活动状态</th>
+                                                <th>待通知人数</th>
+                                                <th>本期开始时间</th>
+                                                <th>活动人员</th>
+                                                <th>待完成人数</th>
+                                                <th>活动创建人</th>
+                                                <th>活动创建时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="J_template">
+                                            <!-- <tr data id="1">
+                                                <td>活动名称</td>
+                                                <td>活动类型</td>
+                                                <td>姓名</td>
+                                                <td>身份证号</td>
+                                                <td>活动级别</td>
+                                                <td>活动状态</td>
+                                                <td>
+                                                <a href="#">2</a>
+                                                </td>
+                                                <td>本期开始时间</td>
+                                                <td>活动人员</td>
+                                                <td>待完成人数</td>
+                                                <td>活动创建人</td>
+                                                <td>活动创建时间</td>
+                                                <td>
+                                                    <a href="javascript:;" class="label-info J_stop"><i class="fa fa-stop"></i>&nbsp;暂停</a>
+                                                    <a href="#" class="label-info J_details"><i class="fa fa-book"></i>&nbsp;详情</a>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                    <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input class="hidId" type="hidden"></input>
+    <!-- 暂停下一期活动对话框 -->
+    <div class="modal fade" id="stopDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定暂停下一期活动吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_stopDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 暂停所有期活动对话框 -->
+    <div class="modal fade" id="stopAllDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定暂停所有期活动吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_stopAllDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 操作失败对话框 -->
+    <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>操作失败，请重新操作!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/html/common/footer.html"-->
+    <script src="/js/e-crb/activities-management/activities-management-ing/activities-management-ing-list.js"></script>
+</body>
+</html>

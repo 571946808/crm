@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"eventId": 1, "number": 11,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"},
+        {"eventId": 2, "number": 12,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"},
+        {"eventId": 3, "number": 13,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"},
+        {"eventId": 4, "number": 14,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"},
+        {"eventId": 5, "number": 15,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"},
+        {"eventId": 6, "number": 16,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"},
+        {"eventId": 7, "number": 17,"name": "姓名1", "type": "112233", "level": "1231234123423423", "currentActiveStartTime": "2017.07.17", "memberGroupId": "用户111", "notificaitonNum": "1111112"}
+    ],
+    "errMsg": "刷新失败！"
+}

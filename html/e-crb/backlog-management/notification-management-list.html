@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>待办通知</title>
+    <!--#include file="/html/common/head.html"-->
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+                            <li><a href="#">待办任务</a></li>
+                            <li class="active">待办通知</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息!</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <form action="" method="" class="form-horizontal J_form">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>搜索</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">姓名</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select1" class="form-control J_selectName w180" name="searchCreatedName"></select>
+                                        </div>
+                                        <label class="col-sm-1 control-label">身份证号</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select2" class="form-control J_selectId w180" name="searchIdcard"></select>
+                                        </div>
+                                        <label class="col-sm-1 control-label">电话</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select3" class="form-control J_selectPhone w180" name="searchPhone"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">  
+                                        <label class="col-sm-1 control-label">级别</label>
+                                        <div class="col-sm-2">
+                                            <select class="col-sm-2 form-control w180" name="searchLevel">
+                                                <option value="-1">请选择</option>
+                                                <option value="1">一级</option>
+                                                <option value="2">二级</option>
+                                            </select>
+                                        </div>
+                                         <label class="col-sm-1 control-label">任务状态</label>
+                                        <div class="col-sm-2">
+                                            <select class="col-sm-2 form-control w180" name="searchStatus">
+                                                <option value="-1">请选择</option>
+                                                <option value="1">11</option>
+                                                <option value="2">22</option>
+                                                <option value="3">33</option>
+                                                <option value="4">44</option>
+                                            </select>
+                                        </div>
+                                        <label class="col-sm-1 control-label">截止日期</label>
+                                        <div class="col-sm-5">
+                                            <input id="start" name="searchStartDate" readonly="readonly" class="Wdate w180" type="text" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'endTime\')}'})"/>
+                                            <span>~</span>
+                                            <input id="endTime" class="Wdate w180" type="text" name="searchEndDate" readonly="readonly" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'start\')}'})"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left">
+                                <button class="btn btn-success btn-radius-no J_search" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-info">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>活动名称</th>
+                                                <th>活动类型</th>
+                                                <th>活动级别</th>
+                                                <th>本期活动开始时间</th>
+                                                <th>活动人员</th>
+                                                <th>待通知人数</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="J_template">
+                                        </tbody>
+                                    </table>
+                                    <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/html/common/footer.html"-->
+    <script src="/js/tool/calendar/WdatePicker.js"></script>
+    <script src="/js/e-crb/backlog-management/notification-management-list.js"></script>
+</body>
+</html>

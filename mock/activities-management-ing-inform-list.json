@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"},
+        {"id": 2,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"},
+        {"id": 3,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"},
+        {"id": 4,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"},
+        {"id": 5,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"},
+        {"id": 6,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"},
+        {"id": 7,"name": 111, "eventName": 110,"eventType": "电话", "eventLevel": "已通知", "eventStartDate": "2011", "noticeContent": "2"}
+    ],
+    "errMsg": "刷新失败！"
+}

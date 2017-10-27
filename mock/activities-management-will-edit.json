@@ -1,0 +1,14 @@
+{
+	"code":0,
+	"name":"sunwanlin",
+	"level":2,
+	"startDate":12345678,
+	"pollingTime":1,
+	"type":1,
+	"remindTime":1,
+	"endDate":123456,
+	"memberGroupId":1,
+	"content":"this is 活动内容",
+	"noticeContent":"this is 通知内容",
+	"attenchment":"this is 文件"
+}

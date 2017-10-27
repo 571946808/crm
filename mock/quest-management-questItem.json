@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "dicQuestItem": "怎么说"}, 
+        {"id": 2, "dicQuestItem": "不存在的"}, 
+        {"id": 3, "dicQuestItem": "瓜皮"}, 
+        {"id": 4, "dicQuestItem": "铁头娃"}, 
+        {"id": 5, "dicQuestItem": "愣头青"}, 
+        {"id": 6, "dicQuestItem": "李时珍的皮"}, 
+        {"id": 7, "dicQuestItem": "边缘ob"}, 
+        {"id": 8, "dicQuestItem": "怎么说"}
+    ],
+    "errMsg": "操作失败！"
+}

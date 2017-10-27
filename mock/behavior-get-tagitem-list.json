@@ -1,0 +1,11 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "tagItem": "汉族"},
+        {"id": 2, "tagItem": "蒙古族"},
+        {"id": 3, "tagItem": "土家图"},
+        {"id": 4, "tagItem": "少林"},
+        {"id": 5, "tagItem": "武当"}
+    ],
+    "errMsg": "操作失败!"
+}

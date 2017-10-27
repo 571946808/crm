@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>来访详情管理列表</title>
+    <!--#include file="/html/common/head.html"-->
+    <link rel="stylesheet" href="/css/client-management/visit-management/visit-management-details-list.css">
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            </li>
+                            <li>
+                                <a href="#">来访管理</a>
+                            </li>
+                            <li class="active">来访详情</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息!</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+                        <input type="hidden"  class="clientId" name="clientId" value="43">
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <form class="form-horizontal J_searchForm">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>查询</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">
+                                                <span class="requires"></span>来访来源
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <!-- <input class="w180 J_userName" type="text" name="visitFrom"/> -->
+                                                <select name="visitFrom" class="w200 J_userName form-control">
+                                                <option value="">请选择</option>
+                                                <option value="0">门诊</option>
+                                                <option value="1">住院</option>
+                                            </select>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">
+                                                <span class="requires"></span>来访内容
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <input class="w180 J_tableName" type="text" name="visitContent"/>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">来访日期</label>
+                                            <div class="col-sm-10"> 
+                                                <input id="start" name="startDate" readonly="readonly" class="Wdate w200" type="text" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}'})"/> 
+                                                <span class="to">~</span>
+                                                <input id="end" name="endDate" readonly="readonly" class="Wdate w200" type="text" onclick="WdatePicker({minDate:'#F{$dp.$D(\'start\')}'})"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left">
+                                <button class="btn btn-success btn-radius-no J_search" type="button"><i class="fa fa-search"></i>&nbsp;查询</button>
+                                <a href="#" class="btn btn-success btn-radius-no" data-toggle="modal" data-target="#addDialog"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4>来访信息列表</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>姓名</th>
+                                                <th>来访来源</th>
+                                                <th>来访日期</th>
+                                                <th>来访内容</th>
+                                                <th>消费金额</th>
+                                                <th>操作人</th>
+                                                <th>操作时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="J_template">
+                                            <!-- <tr data-id="1">
+                                                <td>1</td>
+                                                <td>姓名</td>
+                                                <td>男</td>
+                                                <td>213123121321312312312</td>
+                                                <td>1231234712847</td>
+                                                <td>诊断</td>
+                                                <td>用户类型</td>
+                                                <td>医保类型</td>
+                                                <td>累计消费金额</td>
+                                                <td>
+                                                    <a href="#" class="label-info"><i class="fa fa-pencil"></i>&nbsp;修改</a>
+                                                    <a href="#" class="label-info"><i class="fa fa-search"></i>&nbsp;详情</a>
+                                                    <a href="#" class="label-info J_del" data-toggle="modal" data-target="#delDialog"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                    <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input class="hidId" type="hidden"></input>
+    <!-- 删除对话框 -->
+    <div class="modal fade" id="delDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定删除该权限吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_delDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 添加对话框 -->
+    <div class="modal fade" id="addDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">添加</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal J_addForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">来访日期<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input id="addVisitTime" class="Wdate J_addVisitTime w200" type="text" name="visitTime" onclick="WdatePicker();"/> 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">来访来源<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <select class="form-control J_addVisitFromInput w200" name="visitFrom">
+                                    <option value="-1">--请选择--</option>
+                                    <option value="0">门诊</option>
+                                    <option value="1">住院</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">消费金额<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_addCostInput" name="cost"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">来访内容<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <textarea type="text" class="form-control J_addVisitContentInput" name="visitContent"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_addDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 编辑对话框 -->
+    <div class="modal fade" id="editDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">编辑</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal J_editForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">姓名<span class="requires">&nbsp;</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_editNameInput" name="name"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">来访来源<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <select class="form-control J_editVisitFromInput w200" name="visitFrom">
+                                    <option value="-1">--请选择--</option>
+                                    <option value="1">门诊</option>
+                                    <option value="2">住院</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">来访日期<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input id="editVisitTime" readonly="readonly" class="Wdate J_editVisitTime w200" type="text" name="visitTime" onclick="WdatePicker()"/> 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">来访内容<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <textarea type="text" class="form-control J_editVisitContentInput" name="visitContent"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">消费金额<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_editCostInput" name="cost"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">操作人<span class="requires">&nbsp;</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_editPartyNameInput" name="partyName"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">操作时间<span class="requires">&nbsp;</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_editPartyDateInput" name="partyDate"/>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_editDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/html/common/footer.html"-->
+    <script src="/js/tool/calendar/WdatePicker.js"></script>
+    <script src="/js/client-management/visit-management/visit-management-details-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "number": 1,"name": "姓名1", "idcardNum": "213123121321312312312", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-6-12", "showQuestTime": "2017-6-12"},
+        {"id": 2, "number": 2,"name": "姓名2", "idcardNum": "213123121321312312312", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-6-12", "showQuestTime": "2017-6-12"},
+        {"id": 3, "number": 3,"name": "姓名3", "idcardNum": "213123121321312312313", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-6-12", "showQuestTime": "2017-6-12"},
+        {"id": 4, "number": 4,"name": "姓名4", "idcardNum": "213123121321312312314", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-6-12", "showQuestTime": "2017-6-12"},
+        {"id": 5, "number": 5,"name": "姓名5", "idcardNum": "213123121321312312315", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-6-12", "showQuestTime": "2017-6-12"},
+        {"id": 6, "number": 6,"name": "姓名6", "idcardNum": "213123121321312312316", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-6-12", "showQuestTime": "2017-6-12"},
+        {"id": 7, "number": 7,"name": "姓名7", "idcardNum": "213123121321312312317", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-9-12", "nextQuestTime": "2017-9-12"},
+        {"id": 8, "number": 8,"name": "姓名8", "idcardNum": "213123121321312312318", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-9-12", "showQuestTime": "2017-9-12"},
+        {"id": 9, "number": 9,"name": "姓名9", "idcardNum": "213123121321312312319", "tel": "1231234712847", "allCost": "100$" ,"memberGroup": "A", "level": "普通会员", "questCount": "3", "nextQuestTime": "2017-9-12", "showQuestTime": "2017-9-12"}
+    ],
+    "errMsg": "刷新失败！"
+}

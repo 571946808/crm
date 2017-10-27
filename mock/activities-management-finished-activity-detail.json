@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1,"name": 111, "idcard": 110,"tel": "电话", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"},
+        {"id": 2,"name": 112, "idcard": 110,"tel": "手机", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"},
+        {"id": 3,"name": 113, "idcard": 110,"tel": "MPA", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"},
+        {"id": 4,"name": 111, "idcard": 110,"tel": "小米", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"},
+        {"id": 5,"name": 114, "idcard": 110,"tel": "华为", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"},
+        {"id": 6,"name": 111, "idcard": 110,"tel": "大司马", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"},
+        {"id": 7,"name": 111, "idcard": 110,"tel": "三星", "noticeStatus": "已通知", "startDate": "2011", "joinSituation": "2", "joinStatus": "完成", "accJoinSituation": "3"}
+    ],
+    "errMsg": "刷新失败！"
+}

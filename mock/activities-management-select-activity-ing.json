@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"},
+        {"id": 2, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"},
+        {"id": 3, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"},
+        {"id": 4, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"},
+        {"id": 5, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"},
+        {"id": 6, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"},
+        {"id": 7, "name": "活动名称", "type": "活动类型","participantName":"姓名","participantldcard":"身份证号码","level":"二级","status":"状态","noticedPersons":"人数","thisTermStartDate":"开始时间","menberGroupld":"活动人员","toFinishPersons":"待完成认数","createdPartyId":"活动创建人","createdTime":"创建人时间"}
+    ],
+    "errMsg": "刷新失败！" 
+}

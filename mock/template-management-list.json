@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"templateId": 1,"userId": 111, "number": 11,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"},
+        {"templateId": 2,"userId": 112, "number": 12,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"},
+        {"templateId": 3,"userId": 113, "number": 13,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"},
+        {"templateId": 4,"userId": 111, "number": 14,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"},
+        {"templateId": 5,"userId": 114, "number": 15,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"},
+        {"templateId": 6,"userId": 111, "number": 16,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"},
+        {"templateId": 7,"userId": 111, "number": 17,"templateName": "姓名1", "type": "112233", "level": "1231234123423423", "startDate": "2017.07.17", "endDate": "2018.07.17", "memberGroupId": "用户111", "createdPartyId": "用户1", "createdTime": "2017.07.17"}
+    ],
+    "errMsg": "刷新失败！"
+}

@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1,"name":"111", "idCardNum": "11223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"},
+        {"id": 2,"name": "111", "idCardNum": "11223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"},
+        {"id": 3,"name": "111", "idCardNum": "11223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"},
+        {"id": 4,"name": "111", "idCardNum": "1223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"},
+        {"id": 5,"name": "111", "idCardNum": "11223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"},
+        {"id": 6,"name": "111", "idCardNum": "11223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"},
+        {"id": 7,"name": "111", "idCardNum": "11223344556677889911","tel": "13546875698", "noticeStatus": "113", "BQStartDate": "123123"}
+    ],
+    "errMsg": "刷新失败！"
+}

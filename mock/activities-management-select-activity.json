@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","userId":"111","approve":"0"},
+        {"id": 2, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","userId":"111","approve":"0"},
+        {"id": 3, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","userId":"112","approve":"1"},
+        {"id": 4, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","userId":"113","approve":"0"},
+        {"id": 5, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","userId":"111","approve":"0"},
+        {"id": 6, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","userId":"111","approve":"0"},
+        {"id": 7, "name": "活动名称", "type": "活动类型","level":"二级","evnentStatus":"状态","eventStartBate":"开始日期","eventEndtBate":"结束时间","menberGroupld":"活动人员","createdPartyId":"活动创建人","createdTime":"创建人时间","approve":"0"}
+    ],
+    "errMsg": "刷新失败！" 
+}

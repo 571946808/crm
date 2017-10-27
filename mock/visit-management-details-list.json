@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "list": [
+        {"id":1,"number":"1","name":"name1","visitFrom":1,"visitTime":"2017-7-24","visitContent":"内容1","cost":"1000元","partyName":"操作人1","partyDate":"2017-7-10"},
+        {"id":2,"number":"2","name":"name2","visitFrom":2,"visitTime":"2017-7-25","visitContent":"内容2","cost":"1131元","partyName":"操作人2","partyDate":"2017-7-10"},
+        {"id":3,"number":"3","name":"name3","visitFrom":1,"visitTime":"2017-7-26","visitContent":"内容3","cost":"3453元","partyName":"操作人3","partyDate":"2017-7-10"},
+        {"id":4,"number":"4","name":"name4","visitFrom":1,"visitTime":"2017-7-27","visitContent":"内容4","cost":"6575元","partyName":"操作人4","partyDate":"2017-7-10"},
+        {"id":5,"number":"5","name":"name5","visitFrom":2,"visitTime":"2017-7-28","visitContent":"内容5","cost":"3527元","partyName":"操作人5","partyDate":"2017-7-10"},
+        {"id":6,"number":"6","name":"name6","visitFrom":2,"visitTime":"2017-7-29","visitContent":"内容6","cost":"5400元","partyName":"操作人6","partyDate":"2017-7-10"},
+        {"id":7,"number":"7","name":"name7","visitFrom":1,"visitTime":"2017-7-20","visitContent":"内容7","cost":"5460元","partyName":"操作人7","partyDate":"2017-7-10"},
+        {"id":8,"number":"8","name":"name8","visitFrom":2,"visitTime":"2017-7-21","visitContent":"内容8","cost":"7600元","partyName":"操作人8","partyDate":"2017-7-10"},
+        {"id":9,"number":"9","name":"name9","visitFrom":1,"visitTime":"2017-7-22","visitContent":"内容9","cost":"3000元","partyName":"操作人9","partyDate":"2017-7-10"}
+    ],
+    "errMsg": "刷新失败！"
+}

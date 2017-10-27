@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>患者信息管理</title>
+	<!--#include file="/html/common/head.html"-->
+</head>
+<body>
+	<!--#include file="/html/common/header.html"-->
+	<div class="page clearfix">
+		<div class="holder">	
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 ">
+						<ol class="breadcrumb">
+							<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							<li><a href="#">基础患者</a></li>
+							<li><a href="#" class="active">基础患者详情</a></li>
+						</ol>
+						<div class="alert alert-success J_tip" role="alert">提示信息!</div>
+					</div>
+					<div class="col-sm-12 margin-top--10">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<h4>查看患者</h4>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal J_searchForm J_tableForm">
+									<div class="col-sm-6" >
+										<input type="hidden" name='id' id="J_clientId" value="1"/> 
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires">*</span>姓名
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="哮天" data-valid-rule="notNull" readonly="readonly"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires">*</span>电话
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="12345678912" data-valid-rule="notNull" readonly="readonly"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>性别
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"  value="男" readonly="readonly"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>身高
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"  value="175" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>住址
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"  value="长春市" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>联系人
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="小白" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>医保类型
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="农合" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>医保卡号
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"value="123456789" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>用户类型
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"  readonly="readonly" value="普通用户" >
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">
+												<span class="requires"></span>诊断
+											</label>
+											<div class="col-sm-6">
+												<!-- <input class="w180 J_tableName" type="text" name="name" > -->
+												<textarea class="w180  form-control " rows="3"  readonly="readonly">狗狗楠楠生病了</textarea>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>身份证号码
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" name="idcardNum" readonly="readonly" value="" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>年龄
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"   value="20" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>民族
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="汉" readonly="readonly" >
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>体重
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"  value="140" readonly="readonly" >
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>工作单位
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="嗯" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>联系人电话
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text"   value="15648975236" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>联系人关系
+											</label>
+											<div class="col-sm-6">
+												<input class="w180 J_tableName" type="text" value="主人" readonly="readonly">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires" ></span>累积消费金额 
+											</label>
+											<div class="col-sm-9">
+												<input class="w180 J_tableName" type="text" style="dispaly:inline" value="2" readonly="readonly">
+												<a class="J_details" href="javascript:;" >&nbsp;查看详情</a>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">
+												<span class="requires"></span>参加活动数量
+											</label>
+											<div class="col-sm-9">
+												<input class="w180 J_tableName" type="text" value="1" readonly="readonly" >
+												<a class="J_details" href="javascript:;" >&nbsp;查看详情</a>
+											</div>
+										</div>
+									</div>	
+								</form>
+							</div>	
+							<div class="panel-footer">	
+								<div class="row">
+									<div class="col-sm-6 col-sm-offset-4">
+										<div class="btn-toolbar">
+											<a href="" class="btn-sm btn-default" onclick="window.history.go(-1);"><i class="fa fa-undo"></i>&nbsp;返回
+											</a>&nbsp;
+											<a href="javascript:;" class="btn-success btn-sm J_save">
+												<i class="fa fa-user"></i>&nbsp;加入会员
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 加入会员对话框 -->
+<div class="modal fade" id="joinDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+			</div>
+			<div class="modal-body">
+				<p>确定加入会员吗？</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-success J_joinDlg J_join">确定</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 操作失败对话框 -->
+<div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <p>操作失败，请重新操作!</p>
+            </div>
+            <div class="modal-footer">
+                 <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+  	</div>
+</div>
+<!--#include file="/html/common/footer.html"-->
+	<script type="text/javascript" src="/js/client-management/basic-info-management/basic-info-management-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 2, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 3, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 4, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 5, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 6, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 7, "time": "1354879", "type":"88", "thing":"xx"}, 
+        {"id": 8, "time": "1354879", "type":"88", "thing":"xx"}
+    ],
+    "errMsg": "操作失败！"
+}

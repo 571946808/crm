@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "eventName": "端午节活动"}, 
+        {"id": 2, "eventName": "免费体验活动"}, 
+        {"id": 3, "eventName": "会员积分活动"}, 
+        {"id": 4, "eventName": "春节活动"}, 
+        {"id": 5, "eventName": "元宵节活动"}, 
+        {"id": 6, "eventName": "国庆节活动"}, 
+        {"id": 7, "eventName": "3.15活动"}, 
+        {"id": 8, "eventName": "讲座活动"}
+    ],
+    "errMsg": "操作失败！"
+}

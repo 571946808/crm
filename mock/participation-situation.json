@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "number": 1,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"},
+        {"id": 2, "number": 2,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"},
+        {"id": 3, "number": 3,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"},
+        {"id": 4, "number": 4,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"},
+        {"id": 5, "number": 5,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"},
+        {"id": 6, "number": 6,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"},
+        {"id": 7, "number": 7,"participantName": "姓名", "participantDate": "日期", "content":"内容", "comment":"备注", "createdPartyId":"张三", "createdTime":"操作时间"}
+    ],
+    "errMsg": "刷新失败！" 
+}

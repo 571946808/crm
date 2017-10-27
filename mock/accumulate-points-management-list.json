@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"},
+        {"id": 2, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"},
+        {"id": 3, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"},
+        {"id": 4, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"},
+        {"id": 5, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"},
+        {"id": 6, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"},
+        {"id": 7, "name": "活动名称", "idcardNum": "身份证号码","tel":"电话","allCost":"累计消费","visitCount":"消费次数","lastVisitDate":"最后消费日期","allPoints":"积分累计","memberPoints":"当前积分"}
+    ],
+    "errMsg": "刷新失败！" 
+}

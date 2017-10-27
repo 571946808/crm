@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户管理</title>
+	<!--#include file="/html/common/head.html"-->
+</head>
+<body>
+	<!--#include file="/html/common/header.html" -->
+	<div class="page clearfix">
+		<div class="holder">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ol class="breadcrumb">
+							<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							<li><a href="#">系统管理</a></li>
+							<li class="active">用户管理</li>
+						</ol>
+					</div>
+					<div class="col-sm-12 margin-top--10">
+						<form class="form-horizontal"  action="" method="">
+						    <div class="panel panel-info">
+								<div class="panel-heading">
+									<h4>用户详情</h4>
+								</div>
+								<div class="panel-body">
+									<input type="hidden" name="id" value="111" >
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-sm-4 control-label">真实姓名</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="name" readonly="readonly" value="王小二"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">身份证号码</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="idcard" readonly="readonly" value="130154698745124556"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">用户电话</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="phone" readonly="readonly" value="18865478954"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">用户邮箱</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="email" readonly="readonly" value="546998745@qq.com"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">所属部门</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="department" readonly="readonly" value="外科"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">当前职位</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="position" readonly="readonly" value="大夫"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">直接上级</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="directSuperior" readonly="readonly" value="李某某"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-4 control-label">注册时间</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="registrationTime" readonly="readonly" value="2017.07.11"/>
+											</div>
+										</div>
+									</div>
+									<!-- 右侧内容start -->
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="col-sm-3 control-label">最后登录时间</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="lastLogonTime" readonly="readonly" value="2017.07.16"/>
+											</div>
+									    </div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">最后登录IP</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="finallyLoginIP" readonly="readonly" value="192.168.1.44"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">用户注册IP</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="registerIP" readonly="readonly" value="192.168.1.55"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">最后登录失败时间</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="lastLogonFailureTime" readonly="readonly" value="2017.07.17"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">登录失败次数</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="logonFailures" readonly="readonly" value="8次"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">操作账号</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="operationAccount" readonly="readonly" value="admin"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">账号类型</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="accountType" readonly="readonly" value="超级管理员"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label">用户状态</label>
+											<div class="col-sm-6">
+												<input class="w180" type="text" name="userStatus" readonly="readonly" value="启用"/>
+											</div>
+										</div>
+	                            	</div>
+                            	</div>
+                            	<div class="panel-footer">
+	                            	<div class="row">
+	                            		<div class="col-sm-6 col-sm-offset-5">
+							      			<div class="btn-toolbar">
+								      			<button class="btn-default btn" onclick="window.history.go(-1);" type="button"><i class="fa fa-undo"></i>&nbsp;返回上一页</button>
+							      			</div>
+							      		</div>
+	                            	</div>
+                            	</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--#include file="/html/common/footer.html" -->
+</body>
+</html>

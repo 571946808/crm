@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>用户添加</title>
+		<!--#include file="/html/common/head.html"-->
+    </head>
+	<body>
+		<!--#include file="/html/common/header.html"-->
+		<!-- ============================================================== -->
+		<!-- Start right Content here -->
+		<div class="page">
+			<div class="holder">
+				<div class="container">
+				<!-- Start content -->
+				<!-- 头部 -->
+					<div class="row">
+						<div class="col-sm-12">
+							<ol class="breadcrumb">
+							  	<li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+							  	<li><a href="#">系统管理</a></li>
+							  	<li class="active">用户添加</li>
+							</ol>
+							<div class="alert alert-danger J_tip" role="alert">添加失败!</div>
+							<div class="alert alert-success J_tip" role="alert">添加成功!</div>
+						</div>
+					<!-- 蓝色条 -->
+						<div class="col-sm-12 margin-top--10">	
+							<form class="form-horizontal J_tableForm" method="get" action="" autocomplete="off">
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<h4>添加</h4>
+									</div>
+								    <div class="panel-body">
+								    	<input type="hidden" name='id' class="J_tableId" value="1"/>
+									    <div class="container">
+									    	<!-- 左侧内容start -->
+									        <div class="col-sm-6">
+														<div class="form-group">
+															<label class="col-sm-4 control-label">
+																<span class="requires">*</span>姓名
+															</label>
+															<div class="col-sm-6">
+																<input class="w200 J_userName" type="text" name="name" value=""/>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-sm-4 control-label">
+																<span class="requires">*</span>电话
+															</label>
+															<div class="col-sm-6">
+																<input class="w200 J_phoneNum" type="text" name="tel" value=""/>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-sm-4 control-label">
+																<span class="requires"></span>所属部门
+															</label>
+															<div class="col-sm-6">
+																<select class="form-control J_tableArea w200" name="dic_department">
+																	<option value="-1">请选择...</option>
+																	<option value="1">1部门1</option>
+																	<option value="2">2部门2</option>
+																	<option value="3">3部门3</option>
+																	<option value="4">4部门4</option>
+																	<option value="5">5部门5</option>
+																	<option value="6">6部门6</option>
+																</select>
+															</div>
+														</div>
+										                <div class="form-group">
+															<label class="col-sm-4 control-label">
+																<span class="requires"></span>当前职位
+															</label>
+															<div class="col-sm-6">
+																<select class="form-control J_tableArea w200" name="dic_position">
+																	<option value="-1">请选择...</option>
+																	<option value="1">1职位1</option>
+																	<option value="2">2职位2</option>
+																	<option value="3">3职位3</option>
+																</select>
+															</div>
+														</div>	
+											</div>
+											<!-- 右侧内容start -->
+											<div class="col-sm-6">
+														<div class="form-group">
+															<label class="col-sm-3 control-label">
+																<span class="requires"></span>身份证号码
+															</label>
+															<div class="col-sm-6">
+																<input class="w200 J_tableName" type="text" name="idcardNum" value=""/>
+															</div>
+													    </div>
+														<div class="form-group">
+															<label class="col-sm-3 control-label">
+																<span class="requires"></span>邮箱
+															</label>
+															<div class="col-sm-6">
+																<input class="w200 J_eMail" type="text" name="email" value=""/>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-sm-3 control-label">
+																<span class="requires"></span>直接上级
+															</label>
+															<div class="col-sm-6">
+																<select class="form-control J_tableArea w200" name="dic_immediate_s">
+																	<option value="-1">请选择...</option>
+																	<option value="1">1直接上级1</option>
+																	<option value="2">2直接上级2</option>
+																	<option value="3">3直接上级3</option>
+																	<option value="4">4直接上级4</option>
+																	<option value="5">5直接上级5</option>
+																	<option value="6">6直接上级6</option>
+																</select>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-sm-3 control-label">
+																<span class="requires"></span>账号类型
+															</label>
+															<div class="col-sm-6">
+																<select class="form-control J_tableArea w200" name="user_type">
+																	<option value="-1">请选择...</option>
+																	<option value="1">1超级管理员</option>
+																	<option value="2">2系统用户</option>
+																</select>
+															</div>
+														</div>
+											</div>
+										</div>
+								    </div>
+								    <div class="panel-footer">
+										<div class="row">
+											<div class="col-sm-2 col-sm-offset-4">
+												<div class="btn-toolbar">
+													<button class="btn-success btn J_save" type="submit">
+														<i class="fa fa-save"></i>&nbsp;保存
+											  	    </button>
+											  		<button class="btn-default btn J_reset" type="reset">
+														<i class="fa fa-undo"></i>&nbsp;重置
+													</button>
+											  	</div>
+											</div>
+										</div>
+								    </div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--#include file="/html/common/footer.html"-->	
+	</body>
+	<script type="text/javascript" src="/js/authority-management/user-management-add.js"></script>
+</html>

@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1,"name": 111, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"},
+        {"id": 2,"name": 112, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"},
+        {"id": 3,"name": 113, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"},
+        {"id": 4,"name": 111, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"},
+        {"id": 5,"name": 114, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"},
+        {"id": 6,"name": 111, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"},
+        {"id": 7,"name": 111, "type": "会员关怀型", "rate": "一级", "eventStatus": "注销", "BQStartDate": "2017.07.17", "memberName": "会员A组", "creatorName": "张三", "createdTime": "2017.1.1"}
+    ],
+    "errMsg": "刷新失败！"
+}

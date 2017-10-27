@@ -1,0 +1,15 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "number": 1,"name": "姓名1", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男1", "isMultiple": "0", "addTime": "12345678910", "creator": "人"},
+        {"id": 2, "number": 2,"name": "姓名2", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男2", "isMultiple": "1", "addTime": "12345678910", "creator": "人"},
+        {"id": 3, "number": 3,"name": "姓名3", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男3", "isMultiple": "2", "addTime": "12345678910", "creator": "人"},
+        {"id": 4, "number": 4,"name": "姓名4", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男4", "isMultiple": "3", "addTime": "12345678910", "creator": "人"},
+        {"id": 5, "number": 5,"name": "姓名5", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男5", "isMultiple": "4", "addTime": "12345678910", "creator": "人"},
+        {"id": 6, "number": 6,"name": "姓名6", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男6", "isMultiple": "5", "addTime": "12345678910", "creator": "人"},
+        {"id": 7, "number": 7,"name": "姓名7", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男7", "isMultiple": "6", "addTime": "12345678910", "creator": "人"},
+        {"id": 8, "number": 8,"name": "姓名8", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男8", "isMultiple": "7", "addTime": "12345678910", "creator": "人"},
+        {"id": 9, "number": 9,"name": "姓名9", "labelCount": "用户类型1", "labelText": "诊断", "labelComment": "男9", "isMultiple": "8", "addTime": "12345678910", "creator": "人"}
+    ],
+    "errMsg": "刷新失败！"
+}

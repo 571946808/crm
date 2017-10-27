@@ -1,0 +1,16 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 2, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 3, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 4, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 5, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 6, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 7, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 8, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"},
+        {"id": 9, "name": "姓名", "gender": "男1", "idcardNum": "1231234123423423", "tel": "12345678910",  "dicType": "用户类型1", "dicMCIType": "医保类型", "allCost": "100$", "operatingPersonnel":"操作人","operateTime":"操作人时间"}
+    ],
+    "errMsg": "刷新失败！"
+    
+}

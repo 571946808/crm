@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>待办通知详情</title>
+        <link rel="stylesheet" type="text/css" href="/css/e-crb/template-management/template-management.css">
+        <!--#include file="/html/common/head.html"-->
+    </head>
+    <body>
+        <!--#include file="/html/common/header.html"-->
+        <div class="page clearfix">
+            <div class="holder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb">
+                                <li><a href="#"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+                                <li><a href="#">客户关怀</a></li>
+                                <li class="active">待办通知</li>
+                            </ol>
+                            <div class="alert alert-success J_tip" role="alert">提示信息!</div>
+                            <input type="hidden" class="pageDataCount" value="10">
+                        </div>
+                        <div class="col-sm-12 margin-bottom-30 margin-top--10">
+                            <form class="form-horizontal J_detailForm">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4>待办通知详情</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <input type="hidden" name="id" value="2">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label"><span class="requires">*</span>活动名称</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180" type="text" name="name" value="活动A" readonly="readonly"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label">活动级别</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180" type="text" name="level" value="二级" readonly="readonly"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label">活动时间</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="startDate" class="w180" type="text" value="2017-07-17"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label">循环粒度</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="pollingTime" class="w180" type="text" value="年"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label">是否关联积分</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="isPointsRelated" class="w180" type="text" value="否"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label">是否随访记录</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="isVisitedRecord" class="w180" type="text" value="否"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">活动类型</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="type" class="w180" type="text" value="营销型"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">提醒时间</label>
+                                                <div class="col-sm-4">
+                                                    <input readonly="readonly" name="remindTime" class="w180" type="text" value="活动前"/>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <input class="w50 J_date" type="text" readonly="readonly" name="time" value="2">&nbsp;日
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">到</label>
+                                                <div class="col-sm-6">
+                                                    <input class="w180" name="endDate" type="text" readonly="readonly" value="2017-07-17" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">活动人员</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="memberGroupId" class="w180" type="text" value="会员A组"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">是否HIS关联</label>
+                                                <div class="col-sm-6">
+                                                    <input readonly="readonly" name="isHISRelated" class="w180" type="text" value="否"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <h4>活动内容</h4>
+                                            <hr>
+                                            <textarea readonly="readonly" name="content" class="col-sm-12 h100">哈哈哈哈哈哈哈哈哈啊哈哈</textarea>
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <h4>通知内容</h4>
+                                            <hr>
+                                            <textarea readonly="readonly" name="noticeContent" class="col-sm-12 h100">哈哈哈哈哈哈哈哈哈哈</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-12 margin-top--30">
+                            <div class="panel panel-info">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>序号</th>
+                                                    <th>姓名</th>
+                                                    <th>身份证号</th>
+                                                    <th>电话</th>
+                                                    <th>状态</th>
+                                                    <th>备注</th>
+                                                    <th>通知时间</th>
+                                                    <th>通知人</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="J_template">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#include file="/html/common/footer.html"-->
+        <script src="/js/e-crb/backlog-management/notification-management-detail.js"></script>
+    </body>
+</html>

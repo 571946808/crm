@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1},
+        {"id": 2,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1},
+        {"id": 3,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1},
+        {"id": 4,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1},
+        {"id": 5,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1},
+        {"id": 6,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1},
+        {"id": 7,"eventName": 111, "idcard": 110, "tel": "已通知", "noticeStatus": "2011", "noticeComment": "2","noticeTime":"22","sysNames":1}
+    ],
+    "errMsg": "刷新失败！"
+}

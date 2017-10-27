@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>行为分析</title>
+    <!--#include file="/html/common/head.html"-->
+    <link rel="stylesheet" href="/js/tool/charts/echarts.css">
+    <script src="/js/tool/charts/echarts.min.js"></script>
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;主页</a>
+                            </li>
+                            <li>
+                                <a href="#">画像管理</a>
+                            </li>
+                            <li class="active">行为分析</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <form action="" class="form-horizontal J_searchForm">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <h4>信息选择</h4>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">性别</label>
+                                                <div class="col-sm-8">
+                                                    <select name="" class="form-control">
+                                                        <option value="-1">请选择</option>
+                                                        <option value="0">男</option>
+                                                        <option value="1">女</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">民族</label>
+                                                <div class="col-sm-8">
+                                                    <select name="" class="form-control">
+                                                        <option value="-1">请选择</option>
+                                                        <option value="0">汉族</option>
+                                                        <option value="1">蒙古族</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">医保类型</label>
+                                                <div class="col-sm-8">
+                                                    <select name="" class="form-control">
+                                                        <option value="-1">请选择</option>
+                                                        <option value="0">医保类型1</option>
+                                                        <option value="1">医保类型2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-4">用户类型</label>
+                                                <div class="col-sm-8">
+                                                    <select name="" class="form-control">
+                                                        <option value="-1">请选择</option>
+                                                        <option value="0">用户类型1</option>
+                                                        <option value="1">用户类型2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <h4>信息选择</h4>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-sm-12 tag">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-2">标签类型</label>
+                                                        <div class="col-sm-3">
+                                                            <select name="select1" class="form-control tagType">
+                                                                <option value="">请选择</option>
+                                                                <option value="1">请选择1</option>
+                                                                <option value="2">请选择2</option>
+                                                                <option value="3">请选择3</option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="control-label col-sm-2">标签项</label>
+                                                        <div class="col-sm-3">
+                                                            <select name="" class="form-control tagItem">
+                                                                <option value="-1">请选择</option>
+                                                                <option value="1">请选择</option>
+                                                                <option value="2">请选择</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 tag">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-2">标签类型</label>
+                                                        <div class="col-sm-3">
+                                                            <select name="select2" class="form-control tagType">
+                                                                <option value="">请选择</option>
+                                                                <option value="1">请选择1</option>
+                                                                <option value="2">请选择2</option>
+                                                                <option value="3">请选择3</option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="control-label col-sm-2">标签项</label>
+                                                        <div class="col-sm-3">
+                                                            <select name="" class="form-control tagItem">
+                                                                <option value="-1">请选择</option>
+                                                                <option value="1">请选择</option>
+                                                                <option value="2">请选择</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 tag">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-2">标签类型</label>
+                                                        <div class="col-sm-3">
+                                                            <select name="select3" class="form-control tagType">
+                                                                <option value="">请选择</option>
+                                                                <option value="1">请选择1</option>
+                                                                <option value="2">请选择2</option>
+                                                                <option value="3">请选择3</option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="control-label col-sm-2">标签项</label>
+                                                        <div class="col-sm-3">
+                                                            <select name="" class="form-control tagItem">
+                                                                <option value="-1">请选择</option>
+                                                                <option value="1">请选择</option>
+                                                                <option value="2">请选择</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <div class="margin-bottom-10 margin-top--10 padding-left">  
+                                        <button class="btn btn-success btn-radius-no J_search" type="button"><i class="fa fa-search"></i>&nbsp;搜索</button>      
+                                        <a href="javascript:;" class="btn btn-success margin-left-10 btn-radius-no btn-green J_plan"><i class="fa fa-plus"></i>&nbsp;选择活动方案</a>      
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4>图表</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-sm-4">
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="first" class="bg"></div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="second" class="bg"></div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="third" class="bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4>列表</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" name="sleectAll" class="J_selectAll"></th>
+                                            <th>姓名</th>
+                                            <th>年龄</th>
+                                            <th>电话</th>
+                                            <th>身份证号码</th>
+                                            <th>用户类型</th>
+                                            <th>积分情况</th>
+                                            <th>最高消费金额</th>
+                                            <th>累计消费金额</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="J_template"></tbody>
+                                </table>
+                            </div>
+                            <div class="pull-right">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination" id="pageLimit">
+                                        <li>
+                                            <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 操作失败对话框 -->
+    <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">选择活动方案</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">活动</label>
+                            <div class="col-sm-6">
+                                <select class="form-control col-sm-3 J_activity">
+                                    <option value="-1">请选择</option>
+                                    <option value="0">活动0</option>
+                                    <option value="1">活动1</option>
+                                    <option value="2">活动2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class="btn btn-warning J_detail">详情</a>
+                    <button type="button" class="btn btn-success J_save">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include file="/html/common/footer.html"-->
+    <script src="/js/portrayal-management/behavior-analysis/behavior-analysis-management-list.js"></script>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie' // 使用柱状图就加载line模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('first')); 
+                
+                option = {
+                    title : {
+                        text: '用户类型占比',
+                        x:'center',
+                        y:'bottom'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'访问来源',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:335, name:'直接访问'},
+                                {value:310, name:'邮件营销'},
+                                {value:234, name:'联盟广告'},
+                                {value:135, name:'视频广告'},
+                                {value:1548, name:'搜索引擎'}
+                            ]
+                        }
+                    ]
+                };                                    
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('second')); 
+                
+                option = {
+                    title : {
+                        text: '金额区间占比',
+                        x:'center',
+                        y: 'bottom'
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['rose1','rose2','rose3','rose4','rose5','rose6','rose7','rose8']
+                    },
+                    calculable : true,
+                    series : [
+                        // {
+                        //     name:'半径模式',
+                        //     type:'pie',
+                        //     radius : [20, 110],
+                        //     center : ['25%', 200],
+                        //     roseType : 'radius',
+                        //     width: '40%',       // for funnel
+                        //     max: 40,            // for funnel
+                        //     itemStyle : {
+                        //         normal : {
+                        //             label : {
+                        //                 show : false
+                        //             },
+                        //             labelLine : {
+                        //                 show : false
+                        //             }
+                        //         },
+                        //         emphasis : {
+                        //             label : {
+                        //                 show : true
+                        //             },
+                        //             labelLine : {
+                        //                 show : true
+                        //             }
+                        //         }
+                        //     },
+                        //     data:[
+                        //         {value:10, name:'rose1'},
+                        //         {value:5, name:'rose2'},
+                        //         {value:15, name:'rose3'},
+                        //         {value:25, name:'rose4'},
+                        //         {value:20, name:'rose5'},
+                        //         {value:35, name:'rose6'},
+                        //         {value:30, name:'rose7'},
+                        //         {value:40, name:'rose8'}
+                        //     ]
+                        // },
+                        {
+                            name:'面积模式',
+                            type:'pie',
+                            radius : [30, 110],
+                            center : ['75%', 200],
+                            roseType : 'area',
+                            x: '50%',               // for funnel
+                            max: 40,                // for funnel
+                            sort : 'ascending',     // for funnel
+                            data:[
+                                {value:10, name:'rose1'},
+                                {value:5, name:'rose2'},
+                                {value:15, name:'rose3'},
+                                {value:25, name:'rose4'},
+                                {value:20, name:'rose5'},
+                                {value:35, name:'rose6'},
+                                {value:30, name:'rose7'},
+                                {value:40, name:'rose8'}
+                            ]
+                        }
+                    ]
+                };              
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie' // 使用饼状图就加载pie模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('third')); 
+                
+                option = {
+                    title : {
+                        text: '患者行业占比',
+                        x : 'center',
+                        y : 'bottom',
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'访问来源',
+                            type:'pie',
+                            radius : ['50%', '70%'],
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        show : false
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                },
+                                emphasis : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        textStyle : {
+                                            fontSize : '30',
+                                            fontWeight : 'bold'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[
+                                {value:335, name:'直接访问'},
+                                {value:310, name:'邮件营销'},
+                                {value:234, name:'联盟广告'},
+                                {value:135, name:'视频广告'},
+                                {value:1548, name:'搜索引擎'}
+                            ]
+                        }
+                    ]
+                };
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>
+</html>

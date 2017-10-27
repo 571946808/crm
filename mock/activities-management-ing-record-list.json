@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1,"name": 111, "number": 11,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"},
+        {"id": 2,"name": 112, "number": 12,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"},
+        {"id": 3,"name": 113, "number": 13,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"},
+        {"id": 4,"name": 111, "number": 14,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"},
+        {"id": 5,"name": 114, "number": 15,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"},
+        {"id": 6,"name": 111, "number": 16,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"},
+        {"id": 7,"name": 111, "number": 17,"type": "姓名1", "rate": "112233", "status": "1231234123423423", "startDate": "2017.07.17", "people": "2018.07.17", "creator": "用户111", "createTime": "用户1"}
+    ],
+    "errMsg": "刷新失败！"
+}

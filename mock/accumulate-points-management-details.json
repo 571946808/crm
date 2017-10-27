@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "list": [
+        {"id": 1, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"},
+        {"id": 2, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"},
+        {"id": 3, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"},
+        {"id": 4, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"},
+        {"id": 5, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"},
+        {"id": 6, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"},
+        {"id": 7, "pointsDate": "积分日期", "pointsForm": "积分类型","costPoints":"消费积分","currentPoints":"当前积分","currentSumpoints":"积分累积","eventName":"关联活动名称"}
+    ],
+    "errMsg": "刷新失败！" 
+    
+}

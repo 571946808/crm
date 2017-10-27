@@ -1,0 +1,10 @@
+{
+    "code": 0,
+    "list": [
+        {"checkItemName":"1","checkItemContent":"1"},
+        {"checkItemName":"2","checkItemContent":"2"},
+        {"checkItemName":"3","checkItemContent":"3"},
+        {"checkItemName":"4","checkItemContent":"4"}
+    ],
+    "errMsg": "修改失败！"
+}

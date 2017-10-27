@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>已完成活动</title>
+	<!--#include file="/html/common/head.html"-->
+</head>
+<body>
+	<!--#include file="/html/common/header.html"-->
+	<div class="page clearfix">
+		
+		<div class="holder">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            </li>
+                            <li>
+                                <a href="#">活动管理</a>
+                            </li>
+                            <li class="active">已完成活动</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息！</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+					</div>
+					<div class="col-sm-12 margin-top--10">
+						<form class="form-horizontal J_searchForm">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+                                    <h4>搜索</h4>
+                                </div>
+                                <div class="panel-body">
+                                	<div class="form-group">
+                                        <label class="col-sm-1 control-label">姓名</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select1" class="form-control J_selectName w180" name="creatorName"></select>
+                                        </div>
+                                        <label class="col-sm-2 control-label">身份证号</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select2" class="form-control J_selectId w180" name="idcardNum"></select>
+                                        </div>
+                                        <label class="col-sm-2 control-label">活动名称</label>
+                                        <div class="col-sm-2">
+                                            <select id="editable-select3" class="form-control J_selectActivity w180" name="eventName"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label class="col-sm-1 control-label">活动类型</label>
+                                        <div class="col-sm-2">                                            
+                                            <select name="eventType" class="form-control w180">
+                                                <option value="客户关怀型">客户关怀型</option>
+                                                <option value="营销型">营销型</option>                                               
+                                            </select>
+                                        </div>  
+                                        <label class="col-sm-2 control-label">活动级别</label>
+                                        <div class="col-sm-2">                                                       
+                                            <select name="eventLevel" class="form-control w180">
+                                                <option value="一级">一级</option>
+                                                <option value="二级">二级</option>
+                                                <option value="三级">三级</option>                                               
+                                            </select>
+                                        </div>                                        
+                                    </div>
+                                </div>
+							</div>
+							<div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left">
+								<button class="btn btn-success btn-radius-no J_search" type="button"><i class="fa fa-search"></i>&nbsp;查询</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-12">
+                        <div class="panel panel-info">
+                            <!-- <div class="panel-heading">
+                                <h4>来访信息列表</h4>
+                            </div> -->
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>活动名称</th>
+                                                <th>活动类型</th>
+                                                <th>活动级别</th>
+                                                <th>活动状态</th>                                               
+                                                <th>本期开始时间</th>
+                                                <th>活动人员</th>                                               
+                                                <th>活动创建人</th>
+                                                <th>活动创建日期</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="J_template">                                            
+                                        </tbody>
+                                    </table>
+                                    <div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <input class="hidId" type="hidden"></input>
+	<!--#include file="/html/common/footer.html"-->
+    <script src="/js/e-crb/activities-management/finished-activities/finished-activities.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图表</title>
+    <!--#include file="/html/common/head.html"-->
+    <link rel="stylesheet" href="/js/tool/charts/echarts.css">
+    <script src="/js/tool/charts/echarts.min.js"></script>
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home">&nbsp;主页</i></a>
+                            </li>
+                            <li>
+                                <a href="#">患者管理</a>
+                            </li>
+                            <li class="active">统计展示</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4>统计图表</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-sm-12">
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="first" class="bg"></div>
+                                    <hr>
+                                </div>
+                                <div class="col-sm-8">
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="second" class="bg"></div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                    <div id="third" class="bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载line模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('first')); 
+                
+                option = {
+                    title : {
+                        text: '近一周每组会员消费信息分析',
+                        x : 'center',
+                        y : 'bottom',
+                    },
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            boundaryGap : false,
+                            data : ['周一','周二','周三','周四','周五','周六','周日']
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value'
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'邮件营销',
+                            type:'line',
+                            stack: '总量',
+                            data:[120, 132, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name:'联盟广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[220, 182, 191, 234, 290, 330, 310]
+                        },
+                        {
+                            name:'视频广告',
+                            type:'line',
+                            stack: '总量',
+                            data:[150, 232, 201, 154, 190, 330, 410]
+                        },
+                        {
+                            name:'直接访问',
+                            type:'line',
+                            stack: '总量',
+                            data:[320, 332, 301, 334, 390, 330, 320]
+                        },
+                        {
+                            name:'搜索引擎',
+                            type:'line',
+                            stack: '总量',
+                            data:[820, 932, 901, 934, 1290, 1330, 1320]
+                        }
+                    ],
+                };
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('second')); 
+                
+                option = {
+                    title : {
+                        text: '近半年会员患者及销售情况分析',
+                        x : 'center',
+                        y : 'bottom',
+                    },
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        },
+                        formatter: function (params){
+                            return params[0].name + '<br/>'
+                                   + params[0].seriesName + ' : ' + params[0].value + '<br/>'
+                                   + params[1].seriesName + ' : ' + (params[1].value + params[0].value);
+                        }
+                    },
+                    legend: {
+                        selectedMode:false,
+                        data:['Acutal', 'Forecast']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            data : ['Cosco','CMA','APL','OOCL','Wanhai','Zim']
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value',
+                            boundaryGap: [0, 0.1]
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'Acutal',
+                            type:'bar',
+                            stack: 'sum',
+                            barCategoryGap: '50%',
+                            itemStyle: {
+                                normal: {
+                                    color: 'tomato',
+                                    barBorderColor: 'tomato',
+                                    barBorderWidth: 6,
+                                    barBorderRadius:0,
+                                    label : {
+                                        show: true, position: 'insideTop'
+                                    }
+                                }
+                            },
+                            data:[260, 200, 220, 120, 100, 80]
+                        },
+                        {
+                            name:'Forecast',
+                            type:'bar',
+                            stack: 'sum',
+                            itemStyle: {
+                                normal: {
+                                    color: '#fff',
+                                    barBorderColor: 'tomato',
+                                    barBorderWidth: 6,
+                                    barBorderRadius:0,
+                                    label : {
+                                        show: true, 
+                                        position: 'top',
+                                        formatter: function (params) {
+                                            for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
+                                                if (option.xAxis[0].data[i] == params.name) {
+                                                    return option.series[0].data[i] + params.value;
+                                                }
+                                            }
+                                        },
+                                        textStyle: {
+                                            color: 'tomato'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[40, 80, 50, 80,80, 70]
+                        }
+                    ]
+                };
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/pie' // 使用柱状图就加载pie模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('third')); 
+                
+                option = {
+                    title : {
+                        text: '会员患者人员占比',
+                        x : 'center',
+                        y : 'bottom',
+                    },
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+                        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType : {
+                                show: true, 
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'center',
+                                        max: 1548
+                                    }
+                                }
+                            },
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'访问来源',
+                            type:'pie',
+                            radius : ['50%', '70%'],
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        show : false
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                },
+                                emphasis : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        textStyle : {
+                                            fontSize : '30',
+                                            fontWeight : 'bold'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[
+                                {value:335, name:'直接访问'},
+                                {value:310, name:'邮件营销'},
+                                {value:234, name:'联盟广告'},
+                                {value:135, name:'视频广告'},
+                                {value:1548, name:'搜索引擎'}
+                            ]
+                        }
+                    ]
+                };
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.head-ui{
+	/* opacity: 0.2; */
+}
+.navbar{
+	background-image: url('/img/head-background.png');
+	background-size: 100% 100%;
+}
+.bars{
+	width:230px;
+	height:40px;
+	font-size:25px;
+}
+.fa-exchange{
+	/*width: 230px;*/
+	/*height: 40px;*/
+	cursor: pointer;
+	padding-left: 2px;
+}
+.nav-text{
+    text-align: center;
+}
+.menu-logo{
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+}
+.menu-logo img{
+	display: block;
+	width: 55px;
+	height: 45px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+.navbar-nav li{
+	/*margin-right: 2px;*/
+    padding-right: 12px;
+    cursor:pointer;
+}
+.admin-hello{
+	 padding-top:10px !important; 
+	 margin-right:-15px !important;
+}
+.navbar-nav{
+	padding-right:5px !important; 
+}
+.menu-list{
+	/*padding-right:20px !important ; */
+}
+.logo-pic{
+	height: 51px;
+	width: 55px;
+	margin-left: 15px;
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户管理</title>
+    <!--#include file="/html/common/head.html"-->
+</head>
+<body>
+    <!--#include file="/html/common/header.html"-->
+    <div class="page clearfix">
+        <div class="holder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            </li>
+                            <li>
+                                <a href="#">权限管理</a>
+                            </li>
+                            <li class="active">用户管理</li>
+                        </ol>
+                        <div class="alert alert-success J_tip" role="alert">提示信息!</div>
+                        <input type="hidden" class="pageDataCount" value="10">
+                    </div>
+                    <div class="col-sm-12 margin-top--10">
+                        <form class="form-horizontal J_searchForm">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>用户管理</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">
+                                            <span class="requires"></span>用户名
+                                         </label>
+                                        <span class="col-sm-2">
+                                            <input class="w180 J_name" type="text" name="name" value="" />
+                                        </span>
+                                        <span class="col-sm-6 btn-toolbar">
+                                            <button type="submit"  class="btn J_search btn-success btn-radius-no"><i class="fa fa-search"></i>&nbsp;查询</button>
+                                            <button type="reset" class="btn btn-success"><i class="fa fa-undo"></i>&nbsp;重置</button>
+                                        </span>
+                                    </div>          
+                                </div>
+                            </div>
+                            <div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left btn-toolbar">
+                                <a href="#" class="btn btn-success btn-radius-no"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                                <a href="#" class="btn btn-success btn-radius-no" id="edit_model"><i class="fa fa-pencil"></i>&nbsp;批量修改</a>
+                                <a href="#" class="btn btn-success btn-radius-no" id="del_model"><i class="fa fa-trash"></i>&nbsp;批量删除</a>
+                                <a href="#" class="btn btn-success btn-radius-no" id="allot_model"><i class="fa fa-user"></i>&nbsp;分配角色</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-12">                  
+                        <div class="panel panel-info">
+                            <!-- <div class="panel-heading">
+                                <h4>权限列表</h4>
+                            </div> -->
+                            <div class="panel-body">
+                                <form action="" class="J_form">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th rowspan="2"><input type="checkbox" id="checkAll" class="J_selectAll"></th>
+                                                    <th>账号</th>
+                                                    <th>手机号码</th>
+                                                    <th>添加时间</th>
+                                                    <th>用户类型</th>
+                                                    <th>所属部门</th>
+                                                    <th>当前职位</th>
+                                                    <th>直属上级</th>
+                                                    <th>上次登录时间</th>
+                                                    <th>状态</th>
+                                                    <th>操作</th>
+                                                </tr>               
+                                            </thead>
+                                            <tbody id="J_template">
+                                                <!-- <tr data-id="1">
+                                                    <td>
+                                                    <input type="checkbox" class=""
+                                                    name="subBox" value="1"/>
+                                                    </td>
+                                                    <td>小白</td>
+                                                    <td>12345678912</td>
+                                                    <td>2017.7.19</td>
+                                                    <td>管理员</td>
+                                                    <td>管理部门</td>
+                                                    <td>管理员</td>
+                                                    <td>超级管理员</td>
+                                                    <td>19.17</td>
+                                                    <td>
+                                                        <span class="btn btn-danger btn-xs">禁用</span>
+                                                        <span class="btn btn-success btn-xs">启用</span> 
+                                                   </td>
+                                                    <td>
+                                                        <a href="#" class="label-info J_edit"><i class="fa fa-pencil"></i>&nbsp;编辑</a>
+                                                         <a href="#" class="label-info J_details"><i class="fa fa-book"></i>&nbsp;详情</a>
+                                                        <a href="#" class="label-info J_del" data-toggle="modal" data-target="#delDialog"><i class="fa fa-times"></i>&nbsp;删除</a>
+                                                    </td>
+
+                                                </tr> --> 
+                                            </tbody>
+                                        </table>
+                                        <div class="pull-right">
+                                            <nav aria-label="Page navigation">
+                                                <ul class="pagination" id="pageLimit">
+                                                    <li>
+                                                        <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li>
+                                                        <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                             </nav>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>    
+                </div>          
+            </div>                     
+        </div>
+    </div>
+    <!-- 删除对话框 -->
+    <!-- <input class="hidId" type="hidden"></input> -->
+    <div class="modal fade" id="delDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定删除该会员吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_delDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--批量删除对话框 -->
+    <!-- <input class="hidId" type="hidden"></input> -->
+    <div class="modal fade" id="modalDel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>请至少选择一项</p>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-success J_delAllDlg" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- 批量删除对话框 -->
+    <input class="hidId" type="hidden"></input>
+    <div class="modal fade" id="modalAll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>确定全部删除吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_delAllDlg" >确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 操作失败对话框 -->
+    <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>操作失败，请重新操作!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" >确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 批量编辑对话框 -->
+    <div class="modal fade" id="editDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal J_editForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">用户类型</label>
+                            <div class="col-sm-6">
+                               <select class="form-control w180" id="customerType" value="1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">所属部门</label>
+                            <div class="col-sm-6">
+                                <select class="form-control w180" id="department" value="2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">当前职位</label>
+                            <div class="col-sm-6">
+                                <select class="form-control w180" id="position" value="3">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">直属上级</label>
+                            <div class="col-sm-6">
+                                <select class="form-control w180" id="lead" >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_editDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 批量分配角色 -->
+    <div class="modal fade" id="allotDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal J_editForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">角色</label>
+                            <div class="col-sm-6">
+                               <select class="form-control w180" id="role" value="1">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group hidden J_group" >
+                        <label class="col-sm-3 control-label">分组</label>
+                        <div class="col-sm-6">
+                            <select class="form-control w180 J_memberGroup" id="memberGroup" value="1">
+                                <option value="">---请选择---</option>
+                                <c:forEach var="memberGroup" items="${memberGroups}">
+                                    <option value="${memberGroup.id}">${memberGroup.name}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_allotDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- 分配权限 -->
+   <!-- <div class="modal fade" id="powerDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">添加账号和密码</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal J_powerForm" method="get" action="" autocomplete="off"">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">账号<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_accountNumber w200" name="accountnumber">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">密码<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_password w200" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">重复密码<span class="requires">&nbsp;*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control J_retypePassword w200" name="retypePassword">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default J_reset" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success J_powerDlg">确定</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--#include file="/html/common/footer.html"--> 
+    
+<script src="/js/authority-management/user-management.js"></script>
+</body>
+</html> 

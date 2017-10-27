@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>问卷详情</title>
+	<!--#include file="/html/common/head.html"-->
+</head>
+<body>
+<!--#include file="/html/common/header.html"-->
+	<div class="page clearfix">
+		<div class="holder">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+                        	<ol class="breadcrumb">
+                           		<li>
+                               		<a href="#"><i class="fa fa-home"></i>&nbsp;首页</a>
+                            	</li>
+                            	<li>
+                                	<a href="#">基本信息管理</a>
+                            	</li>
+                            	<li class="active">问卷详情</li>
+                        	</ol>
+                        	<div class="alert alert-success J_tip" role="alert">提示信息！</div>
+                        	<input type="hidden" class="pageDataCount" value="10">
+            		</div>
+            		<div class="col-sm-12 margin-top--10">
+						<form class="form-horizontal J_searchForm">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+                                    <h4>问卷</h4>
+                                </div>
+                                <div class="panel-body">
+                                	<div class="form-group">
+                                		<input type="hidden" name="clientId" value="123">
+                                        <label class="col-sm-1 control-label">问卷项</label>
+                                        <!-- <div class="col-sm-2">
+                                        	<input id="editable-select1" class="form-control w180" name="name" />
+                                        </div> -->
+                                        <div class="col-sm-2">
+                                            <select id="J_select" class="form-control w180" name="name">
+                                            	<!-- <option>2</option>
+                                            	<option>3</option> -->
+                                            </select>
+                                        </div>
+                                        <label class="col-sm-2 control-label">记录时间</label>
+                                        <div class="col-sm-7"> 
+	                                        <input id="start" name="starttime" readonly="readonly" class="Wdate J_startTime w200" type="text" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'end\')}'})"/> 
+	                                        <span class="to">~</span>
+	                                        <input id="end" name="finaltime" readonly="readonly" class="Wdate J_startTime w200" type="text" onclick="WdatePicker({minDate:'#F{$dp.$D(\'start\')}'})"/>
+	                                    </div>
+                                    </div>
+                                </div>	
+							</div>
+							<div class="col-sm-12 margin-bottom-10 margin-top--10 padding-left">
+								<button class="btn btn-success btn-radius-no J_search" type="button"><i class="fa fa-search"></i>&nbsp;查询</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-12">
+						<div class="panel panel-info">
+							<!-- <div class="panel-heading">
+                                <h4>用户列表</h4>
+                            </div>	 -->			
+							<div class="panel-body"> 
+								<div class="table-responsive">
+									<table class="table table-hover table-bordered">
+										<thead>
+											<tr>
+												<th>序号</th>
+												<th>问卷项</th>
+												<th>问卷内容</th>
+												<th>记录开始时间</th>
+												<th>记录结束时间</th>
+											</tr>
+										</thead>
+										<tbody id="J_template"></tbody>
+										<!-- <tbody>
+											<tr data-id="1">
+												<td>1</td>
+												<td>饮食情况</td>
+												<td>怎么说</td>
+												<td>2017-2-12</td>
+												<td>2017-2-15</td>
+											</tr>
+											<tr data-id="2">
+												<td>1</td>
+												<td>饮食情况</td>
+												<td>怎么说</td>
+												<td>2017-2-12</td>
+												<td>2017-2-15</td>
+											</tr>
+										</tbody> -->
+									</table>
+									<div class="pull-right">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination" id="pageLimit">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input class="hidId" type="hidden"></input>
+	<!--#include file="/html/common/footer.html"-->
+	<script src="/js/tool/calendar/WdatePicker.js"></script> 
+    <script src="/js/client-management/questionnaire-management/questionnaire-management-detail.js"></script>
+</body>
+</html>
